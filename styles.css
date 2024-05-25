@@ -1,14 +1,13 @@
-/* Reset some default styles */
+/* Reset and base styles */
 body, ul, h1, h2, h3, p {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif; /* Modern, clean font */
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
     color: #333; /* Default text color */
 }
 
-/* Body background and overall layout */
 body {
-    background-color: #f0f2f5; /* Light background color for a clean look */
+    background-color: #f9fafb; /* Light background color for a clean look */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -16,8 +15,8 @@ body {
 
 /* Header styles */
 header {
-    background-color: #1e1e2f; /* Dark header for contrast */
-    padding: 20px 0;
+    background-color: #282c34; /* Dark header for contrast */
+    padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
@@ -42,25 +41,25 @@ header {
 }
 
 .menu li a:hover {
-    background-color: #57577a; /* Subtle background change on hover */
+    background-color: #3c4049; /* Subtle background change on hover */
     border-radius: 5px;
 }
 
 /* Main content styles */
 .main-content {
     flex: 1;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff; /* White background for readability */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #ffffff; /* White background for readability */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* Paragraph box styles */
 .paragraph-box {
-    background-color: #fafafa; /* Light background for contrast */
-    border: 1px solid #ddd; /* Light border */
+    background-color: #f8f9fa; /* Light background for contrast */
+    border: 1px solid #e9ecef; /* Light border */
     border-radius: 10px;
     padding: 20px;
     margin-top: 20px;
@@ -68,41 +67,41 @@ header {
 }
 
 .paragraph-box p {
-    color: #333; /* Darker text color for readability */
+    color: #495057; /* Darker text color for readability */
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 /* Slider styles */
 .slider {
     position: relative;
     width: 100%;
-    height: 400px; /* Adjust height for a modern look */
+    height: 450px; /* Adjust height for a modern look */
     overflow: hidden;
     margin: 50px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .slides {
     display: flex;
-    transition: transform 0.4s ease;
+    transition: transform 0.6s ease; /* Smooth transition */
 }
 
 .slide {
     flex: 1 0 100%;
     background-size: cover;
     background-position: center;
-    background-image: url('slide1.jpg'); /* Placeholder image */
+    background-image: url('https://source.unsplash.com/random/1'); /* Placeholder image */
 }
 
 /* Additional slides with different images */
 #slide2 ~ .slides .slide:nth-child(2) {
-    background-image: url('slide2.jpg'); /* Placeholder image */
+    background-image: url('https://source.unsplash.com/random/2'); /* Placeholder image */
 }
 
 #slide3 ~ .slides .slide:nth-child(3) {
-    background-image: url('slide3.jpg'); /* Placeholder image */
+    background-image: url('https://source.unsplash.com/random/3'); /* Placeholder image */
 }
 
 /* Hide radio buttons */
@@ -117,6 +116,7 @@ header {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    gap: 10px;
 }
 
 .navigation label {
@@ -124,12 +124,12 @@ header {
     height: 12px;
     border-radius: 50%;
     background-color: #ccc;
-    margin: 0 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .slider input[type="radio"]:checked + .navigation label {
-    background-color: #333;
+    background-color: #495057;
 }
 
 /* Slide transitions */
@@ -147,7 +147,7 @@ header {
 
 /* Footer styles */
 footer {
-    background-color: #1e1e2f;
+    background-color: #282c34;
     color: #fff;
     text-align: center;
     padding: 20px;
