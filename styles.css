@@ -1,0 +1,213 @@
+body {
+    background-image: url('img1.png');
+    background-repeat: repeat; /* or repeat-x, repeat-y for one direction */
+  }
+ 
+/* Reset some default styles for the menu */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    /* Center the menu horizontally */
+    display: flex;
+    justify-content: center;
+    background-color: #0c043a; /* Background color for the menu */
+    padding: 20px; /* Add padding to the menu */
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu li {
+    /* Display menu items inline and add spacing between items */
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu li:last-child {
+    margin-right: 0; /* Remove right margin from the last item */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #05660d; /* Text color for the menu items */
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bolder;
+    text-decoration: blink;
+    text-transform: uppercase;
+    padding: 14px 16px;
+    /* Add a subtle border and border radius for a professional look */
+    border: 2px solid #e60808;
+    border-radius: 6px;
+    /* Optional: Add box-shadow on hover for a subtle effect */
+    transition: box-shadow 0.3s ease;
+}
+
+.menu li a:hover {
+    background-color: #220557; /* Background color on hover */
+    /* Optional: Add a box-shadow to create a subtle hover effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px;
+}
+
+.paragraph-box {
+    background-color: #07070c;
+    border: 30px solid #100453;
+    border-radius:50px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.paragraph-box p {
+    color: #096106;
+    font-size: 18px;
+    text-decoration: blink;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* Optional: Add a box-shadow to the paragraph box */
+.paragraph-box {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-content1 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px;
+}
+
+.paragraph-box1 {
+    background-color: #07070c;
+    border: 30px solid #100453;
+    border-radius:50px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.paragraph-box1 p {
+    color: #096106;
+    font-size: 18px;
+    text-decoration: blink;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* Optional: Add a box-shadow to the paragraph box */
+.paragraph-box1 {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 550px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 300%; /* Adjust to match the number of slides (3 slides in this case) */
+    height: 100%;
+    /* Optional: If you want to transition smoothly between slides */
+    transition: transform 0.4s ease;
+}
+
+.slide {
+    flex: 0 0 33.3333%; /* Adjust to match the number of slides (3 slides in this case) */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Hide the radio buttons */
+.slider input[type="radio"] {
+    display: none;
+}
+
+/* Style the navigation indicators (labels) */
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.navigation label {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Change the color of the active navigation indicator */
+.slider input[type="radio"]:checked + .navigation label {
+    background-color: #333;
+}
+
+/* Move the slides using CSS animations */
+#slide1:checked ~ .slides {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .slides {
+    transform: translateX(-33.3333%);
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(-66.6666%);
+}
+
+#slide4:checked ~ .slides {
+    transform: translateX(-99.9999%);
+}
+
+#slide5:checked ~ .slides {
+    transform: translateX(-133.3333%);
+}
+
+
+.main-content2 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px;
+}
+
+.paragraph-box2 {
+    background-color: #07070c;
+    border: 30px solid #100453;
+    border-radius:50px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.paragraph-box2 p {
+    color: #096106;
+    font-size: 18px;
+    text-decoration: blink;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* Optional: Add a box-shadow to the paragraph box */
+.paragraph-box2 {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
