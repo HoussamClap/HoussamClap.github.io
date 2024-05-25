@@ -1,122 +1,152 @@
-/* Reset and base styles */
-body, ul, h1, h2, h3, p {
+body {
+    background-image: url('paint2.png');
+    background-repeat: repeat; /* or repeat-x, repeat-y for one direction */
+  }
+ 
+/* Reset some default styles for the menu */
+body, ul {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif; /* Modern, clean font */
-    color: #333; /* Default text color */
-}
-
-body {
-    background-color: #f9fafb; /* Light background color for a clean look */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Header styles */
-header {
-    background-color: #282c34; /* Dark header for contrast */
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .menu {
+    /* Center the menu horizontally */
     display: flex;
     justify-content: center;
+    background-color: #0c043a; /* Background color for the menu */
+    padding: 20px; /* Add padding to the menu */
 }
 
 .menu ul {
     list-style: none;
-    display: flex;
-    gap: 20px; /* Uniform gap between items */
+}
+
+.menu li {
+    /* Display menu items inline and add spacing between items */
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu li:last-child {
+    margin-right: 0; /* Remove right margin from the last item */
 }
 
 .menu li a {
     text-decoration: none;
-    color: #fff; /* Light text color for contrast */
+    color: #05660d; /* Text color for the menu items */
     font-size: 16px;
-    font-weight: bold;
-    padding: 10px 20px;
-    transition: all 0.3s ease; /* Smooth transition */
+    font-style: italic;
+    font-weight: bolder;
+    text-decoration: blink;
+    text-transform: uppercase;
+    padding: 14px 16px;
+    /* Add a subtle border and border radius for a professional look */
+    border: 2px solid #e60808;
+    border-radius: 6px;
+    /* Optional: Add box-shadow on hover for a subtle effect */
+    transition: box-shadow 0.3s ease;
 }
 
 .menu li a:hover {
-    background-color: #3c4049; /* Subtle background change on hover */
-    border-radius: 5px;
+    background-color: #220557; /* Background color on hover */
+    /* Optional: Add a box-shadow to create a subtle hover effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-/* Main content styles */
 .main-content {
-    flex: 1;
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #ffffff; /* White background for readability */
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px;
 }
 
-/* Paragraph box styles */
 .paragraph-box {
-    background-color: #f8f9fa; /* Light background for contrast */
-    border: 1px solid #e9ecef; /* Light border */
-    border-radius: 10px;
+    background-color: #07070c;
+    border: 30px solid #100453;
+    border-radius:50px;
     padding: 20px;
     margin-top: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .paragraph-box p {
-    color: #495057; /* Darker text color for readability */
+    color: #096106;
     font-size: 18px;
-    line-height: 1.7;
+    text-decoration: blink;
+    font-style: italic;
+    line-height: 1.6;
 }
 
-/* Slider styles */
+/* Optional: Add a box-shadow to the paragraph box */
+.paragraph-box {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-content1 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px;
+}
+
+.paragraph-box1 {
+    background-color: #07070c;
+    border: 30px solid #100453;
+    border-radius:50px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.paragraph-box1 p {
+    color: #096106;
+    font-size: 18px;
+    text-decoration: blink;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* Optional: Add a box-shadow to the paragraph box */
+.paragraph-box1 {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .slider {
     position: relative;
     width: 100%;
-    height: 450px; /* Adjust height for a modern look */
+    height: 550px; /* Adjust the height as needed */
     overflow: hidden;
-    margin: 50px 0;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .slides {
     display: flex;
-    transition: transform 0.6s ease; /* Smooth transition */
+    width: 300%; /* Adjust to match the number of slides (3 slides in this case) */
+    height: 100%;
+    /* Optional: If you want to transition smoothly between slides */
+    transition: transform 0.4s ease;
 }
 
 .slide {
-    flex: 1 0 100%;
+    flex: 0 0 33.3333%; /* Adjust to match the number of slides (3 slides in this case) */
+    height: 100%;
     background-size: cover;
     background-position: center;
-    background-image: url('https://source.unsplash.com/random/1'); /* Placeholder image */
 }
 
-/* Additional slides with different images */
-#slide2 ~ .slides .slide:nth-child(2) {
-    background-image: url('https://source.unsplash.com/random/2'); /* Placeholder image */
-}
-
-#slide3 ~ .slides .slide:nth-child(3) {
-    background-image: url('https://source.unsplash.com/random/3'); /* Placeholder image */
-}
-
-/* Hide radio buttons */
+/* Hide the radio buttons */
 .slider input[type="radio"] {
     display: none;
 }
 
-/* Navigation indicators */
+/* Style the navigation indicators (labels) */
 .navigation {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 10px;
 }
 
 .navigation label {
@@ -124,52 +154,60 @@ header {
     height: 12px;
     border-radius: 50%;
     background-color: #ccc;
+    margin: 0 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
+/* Change the color of the active navigation indicator */
 .slider input[type="radio"]:checked + .navigation label {
-    background-color: #495057;
+    background-color: #333;
 }
 
-/* Slide transitions */
+/* Move the slides using CSS animations */
 #slide1:checked ~ .slides {
     transform: translateX(0);
 }
 
 #slide2:checked ~ .slides {
-    transform: translateX(-100%);
+    transform: translateX(-33.3333%);
 }
 
 #slide3:checked ~ .slides {
-    transform: translateX(-200%);
+    transform: translateX(-66.6666%);
 }
 
-/* Footer styles */
-footer {
-    background-color: #282c34;
-    color: #fff;
-    text-align: center;
+#slide4:checked ~ .slides {
+    transform: translateX(-99.9999%);
+}
+
+#slide5:checked ~ .slides {
+    transform: translateX(-133.3333%);
+}
+
+
+.main-content2 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px;
+}
+
+.paragraph-box2 {
+    background-color: #07070c;
+    border: 30px solid #100453;
+    border-radius:50px;
     padding: 20px;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    margin-top: 20px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .menu ul {
-        flex-direction: column;
-        align-items: center;
-    }
+.paragraph-box2 p {
+    color: #096106;
+    font-size: 18px;
+    text-decoration: blink;
+    font-style: italic;
+    line-height: 1.6;
+}
 
-    .main-content {
-        margin: 20px;
-        padding: 15px;
-    }
-
-    .slider {
-        height: 300px;
-    }
+/* Optional: Add a box-shadow to the paragraph box */
+.paragraph-box2 {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
